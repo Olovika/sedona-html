@@ -69,11 +69,13 @@ a {
 
 ul {
     margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
 ol {
     margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
@@ -142,6 +144,7 @@ p {
     right: 0;
     top: 0;
     bottom: 0;
+
 }
 
 .navigation-menu {
@@ -150,7 +153,6 @@ p {
     gap: 34px;
     max-width: 355px;
     margin-left: 239px;
-    padding: 20px 17px;
     justify-content: center;
     align-items: center;
 }
@@ -171,13 +173,15 @@ p {
     font-size: 20px;
     line-height: 26px;
     color: #000000;
+    width: fit-content;
+    padding-bottom: 16px;
 
 }
 
 .navigation-link-current::before {
     position: absolute;
     right: 0;
-    bottom: -16px;
+    bottom: 0px;
     left: 0;
     height: 2px;
     background-color: #756257;
@@ -221,10 +225,82 @@ p {
 
 /*Блок Advantages */
 
-.advantages-item {
+.advantages-container {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #83B3D3;
+    width: 100%;
 }
 
-.content-block-1 {
-    display: grid;
+.card-1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    padding-top: 97px;
+    padding-bottom: 87px;
+}
+
+
+.advantages-item-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    max-width: 400px;
+}
+
+.advantages-item-number {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    max-width: 250px;
+}
+
+.advantages-item-text {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 220px;
+}
+
+.advantages-img {
+    margin: 0;
+    padding: 0;
+}
+
+.advantages-list-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card-inner-1 {
+    width: 400px;
+}
+
+.advantages-item-inner-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    max-width: 250px;
+}
+
+.advantages-item-inner-text {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #333333;
+    max-width: 250px;
 }
