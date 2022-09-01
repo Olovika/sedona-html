@@ -18,6 +18,11 @@
 
 html {
     height: 100%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
 }
 
 body {
@@ -31,6 +36,7 @@ body {
     color: #333333;
 }
 
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -42,16 +48,6 @@ body {
     overflow: hidden;
 }
 
-h1 {
-    display: none;
-}
-
-.page-container-inner {
-    margin: 0 auto;
-    max-width: 1060px;
-    width: 100%;
-}
-
 .shadow-container {
     margin: 0 auto;
     max-width: 1280px;
@@ -60,7 +56,9 @@ h1 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.promo-img {
+.page-container-inner {
+    margin: 0 auto;
+    max-width: 1060px;
     width: 100%;
 }
 
@@ -74,14 +72,41 @@ ul {
     list-style-type: none;
 }
 
+ol {
+    margin: 0;
+    list-style-type: none;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
 .button {
     display: inline-block;
     box-sizing: border-box;
     padding: 8px 15px;
     font-family: inherit;
+    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
@@ -94,43 +119,112 @@ ul {
 .navigation-button {
     width: 160px;
     height: 37px;
+    margin-left: 20px;
+    margin-top: 14px;
+    margin-bottom: 19px;
 }
 
 /*Блок Navigation*/
 
 .navigation {
-    display: flex;
-    margin: 0 auto;
-}
-
-.navigation-list {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+}
+
+.navigation-logo-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .navigation-menu {
     display: flex;
+    flex-wrap: wrap;
     gap: 34px;
-    max-width: 345px;
-    margin-right: auto;
+    max-width: 355px;
+    margin-left: 239px;
     padding: 20px 17px;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation-user {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: center;
     max-width: 264px;
     margin-left: auto;
 }
 
 .navigation-link {
-    display: block;
     position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+
 }
 
-.navigation-item {
-    position: relative;
+.navigation-link-current::before {
+    position: absolute;
+    right: 0;
+    bottom: -16px;
+    left: 0;
+    height: 2px;
+    background-color: #756257;
+    content: "";
+}
+
+/*Блок Promo*/
+
+.promo-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 63px;
+    padding-bottom: 80px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.promo-img {
+    width: 100%;
+}
+
+.promo-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    max-width: 720px;
+    margin-bottom: 31px;
+}
+
+.promo-text {
+    max-width: 720px;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: center;
+    color: #333333;
+}
+
+/*Блок Advantages */
+
+.advantages-item {
+    background-color: #83B3D3;
+}
+
+.content-block-1 {
+    display: grid;
 }
