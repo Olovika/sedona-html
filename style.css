@@ -50,7 +50,7 @@ body {
 
 .shadow-container {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1200px;
     width: 100%;
     background: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -181,7 +181,7 @@ p {
 .navigation-link-current::before {
     position: absolute;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     height: 2px;
     background-color: #756257;
@@ -228,11 +228,15 @@ p {
 .advantages-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: #83B3D3;
     width: 100%;
 }
 
-.card-1 {
+.wrapper-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -242,10 +246,19 @@ p {
     width: 400px;
     padding-top: 97px;
     padding-bottom: 87px;
+    background-color: #83B3D3;
 }
 
+.advantages-card-2 {
+    order: 2;
+}
 
-.advantages-item-title {
+.advantages-card-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-card-title {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
@@ -255,7 +268,7 @@ p {
     max-width: 400px;
 }
 
-.advantages-item-number {
+.advantages-card-number {
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -264,7 +277,7 @@ p {
     max-width: 250px;
 }
 
-.advantages-item-text {
+.advantages-card-text {
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -272,35 +285,141 @@ p {
     max-width: 220px;
 }
 
-.advantages-img {
-    margin: 0;
-    padding: 0;
+.advantages-card-img img {
+    height: 100%;
 }
 
+/*Внутренние списки Inner*/
 .advantages-list-inner {
     display: flex;
     flex-wrap: wrap;
-
 }
 
-.card-inner-1 {
+.advantages-card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
     width: 400px;
+    padding: 75px;
+    padding-top: 89px;
 }
 
-.advantages-item-inner-title {
+.advantages-card-inner-last {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 400px;
+    padding: 75px;
+    padding-top: 89px;
+}
+
+.advantages-card-inner-1 {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-card-inner-2 {
+    background-color: #FFFFFF;
+}
+
+.advantages-card-inner-3 {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-card-inner-bg {
+    background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-card-inner-title {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
     color: #000000;
-    max-width: 250px;
+    max-width: 400px;
 }
 
-.advantages-item-inner-text {
+.advantages-card-inner-text {
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: #333333;
     max-width: 250px;
+}
+
+/*Блок Hotel search*/
+.hotel-search-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 91px;
+    padding-bottom: 93px;
+}
+
+.hotel-search-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    max-width: 720px;
+    margin-bottom: 29px;
+}
+
+.hotel-search-text {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+    max-width: 720px;
+    margin-bottom: 56px;
+}
+
+.hotel-search-button {
+    width: 575px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/*Блок Subscription*/
+
+.subscription-container {
+    padding: 95px 0;
+    background-image: url("./images/form-background.jpeg");
+    background-repeat: no-repeat;
+}
+
+.subscription-form {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.subscription-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.subscription-text {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 46px;
 }
