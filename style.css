@@ -398,6 +398,7 @@ p {
     padding: 95px 0;
     background-image: url("./images/form-background.jpeg");
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .subscription-form {
@@ -422,4 +423,71 @@ p {
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 46px;
+}
+
+.subscription-form {
+    display: flex;
+}
+
+.subscription-field {
+    background: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    width: 600px;
+    width: 100%;
+    border: none;
+    padding: 23px 22px;
+    font-size: 18px;
+    line-height: 26px;
+    align-items: center;
+    color: #000000;
+}
+
+input::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+    align-items: center;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.subscription-button {
+    background: #83B3D3;
+    border-radius: 0px 10px 10px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 200px;
+    border: none;
+    padding: 19px 0;
+}
+
+/*Блок Footer*/
+.footer-container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contacts-phone {
+    font-style: normal;
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #000000;
+    max-width: 720px;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-social-icon .footer-logo {
+    width: fit-content;
+    align-items: center;
 }
