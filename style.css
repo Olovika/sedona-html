@@ -410,6 +410,7 @@ p {
     background-image: url("./images/form-background.jpeg");
     background-repeat: no-repeat;
     width: 100%;
+    background-size: cover;
 }
 
 .subscription-container-catalog {
@@ -517,15 +518,32 @@ input::placeholder {
     max-width: 720px;
 }
 
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
 .footer-social-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.footer-social-icon .footer-logo {
-    width: fit-content;
+.footer-social-item {
+    width: 20px;
+}
+
+.footer-social-item a {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
 }
 
 /*Страница Каталог*/
@@ -548,6 +566,8 @@ input::placeholder {
     margin: 0;
     margin-bottom: 5px;
 }
+
+/*Breadcrumbs*/
 
 .breadcrumbs-list {
     display: flex;
@@ -572,10 +592,11 @@ input::placeholder {
 
 .breadcrumbs-item::after {
     position: absolute;
-    top: 7px;
-    right: -20px;
-    width: 8px;
-    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16px;
+    width: 5px;
+    height: 8px;
     background-image: url("./icons/catalog-arrow-right.svg");
     background-repeat: no-repeat;
     content: "";
@@ -585,6 +606,8 @@ input::placeholder {
     content: none;
 }
 
+/*Catalog-filter*/
+
 .catalog-filter {
     display: flex;
 }
@@ -593,6 +616,15 @@ input::placeholder {
     margin: 0;
     padding: 0;
     border: none;
+}
+
+.catalog-filter-group-infrastructure {
+    margin-right: 67px;
+}
+
+.catalog-filter-group-pricing {
+    max-width: 287px;
+    margin-left: auto;
 }
 
 .catalog-filter-title {
@@ -608,9 +640,11 @@ input::placeholder {
 }
 
 .catalog-filter-title-housing {
-    margin-right: 216px;
     width: 100%;
+}
 
+.catalog-filter-group-pricing {
+    margin-right: 81px;
 }
 
 .catalog-filter-list {
@@ -626,7 +660,22 @@ input::placeholder {
 }
 
 .catalog-filter-label {
-    margin-right: 81px;
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+}
+
+.catalog-filter-label::after {
+    content: "от";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    opacity: 0.3;
+    transform: translateY(-50%);
+}
+
+.catalog-filter-label:last-child::after {
+    content: "до";
 }
 
 .catalog-filter-button {
@@ -634,12 +683,15 @@ input::placeholder {
     flex-direction: column;
     gap: 20px;
     max-width: 160px;
-    margin-top: 34px;
+    margin-top: auto;
 }
 
+/*Button*/
+
 .button-apply {
+    line-height: 16px;
     background-color: #83B3D3;
-    padding: 17px 35px;
+    padding: 16px 35px;
 }
 
 .button-reset {
@@ -658,11 +710,12 @@ input::placeholder {
     cursor: pointer;
 }
 
+/*Control*/
+
 .control {
     position: relative;
     display: block;
-    padding-left: 39px;
-
+    margin-left: 39px;
 }
 
 .control-mark {
@@ -674,18 +727,75 @@ input::placeholder {
     width: 20px;
     height: 20px;
     border-radius: 4px;
+    margin-left: -39px;
     background: #FFFFFF;
+}
+
+.control-input:checked + .control-mark {
+    background-color: #FFFFFF;
+    background-image: url("./icons/catalog-checked.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .control-mark-radio {
     border-radius: 50%;
 }
 
+.control-input:checked + .control-mark-radio {
+    background-color: #FFFFFF;
+    background-image: url("./icons/catalog-radio.svg");
+    background-repeat: no-repeat;
+}
+
+/*Range*/
+
+.range {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    max-width: 287px;
+    display: flex;
+    align-items: center;
+}
+
+.range-scale {
+    position: relative;
+    width: 287px;
+    height: 4px;
+    background-color: #ffffff;
+    opacity: 0.3;
+}
+
+.range-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
 .range-wrapper-inputs {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .range-input {
+    top: 0;
     font-size: 18px;
     line-height: 23px;
     color: #FFFFFF;
@@ -693,6 +803,36 @@ input::placeholder {
     border: 2px solid #FFFFFF;
     border-radius: 4px;
     appearance: textfield;
-    max-width: 144px;
+    width: 100%;
+    margin: 0;
+    padding: 14px 40px 11px 19px;
+}
+
+/* Remove arrows for input type number */
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     margin: 0;
 }
+
+.range-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.range-input-left {
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.range-input-right {
+    border-radius: 0 4px 4px 0;
+}
+
+/*.range-toggle:hover {*/
+/*    background-color: #dbb590;*/
+/*}*/
+
+/*.range-toggle:active,*/
+/*.range-toggle:focus {*/
+/*    outline: 3px solid #dbb590;*/
+/*}*/
