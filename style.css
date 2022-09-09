@@ -1062,9 +1062,9 @@ input::placeholder {
 
 .elements {
     display: flex;
-    /*max-width: 390px;*/
-    /*width: 100%;*/
-    /*gap: 51px;*/
+    max-width: 390px;
+    width: 100%;
+    gap: 51px;
     align-items: center;
     margin-left: auto;
 }
