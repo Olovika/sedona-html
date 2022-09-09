@@ -178,12 +178,239 @@
                         </fieldset>
                         <div class="catalog-filter-button">
                             <button class="button button-apply" type="submit">Применить</button>
-                            <button class="button-reset" type="reset">Сбросить</button>
+                            <button class="button button-reset" type="reset">Сбросить</button>
                         </div>
                     </form>
                 </div>
             </section>
         </div>
+        <section class="sorting">
+            <div class="page-container-inner sorting-container">
+                <span class="title sorting-title">Найдено гостиниц: 38</span>
+                <div class="select  sorting-type">
+                    <select class="select-control" aria-label="Сортировка">
+                        <option value="popular">Сначала дешёвые</option>
+                        <option value="cheap">Сначала популярные</option>
+                        <option value="expensive">Сначала дорогие</option>
+                    </select>
+                </div>
+                <div class="card-grid-toggle-wrapper">
+                    <a href="#" class="card-grid-toggle card-grid-toggle-current" type="button">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_24196_296)">
+                                <path d="M4 0H0V6H4V0Z" fill="black"/>
+                                <path d="M16 0H12V6H16V0Z" fill="black"/>
+                                <path d="M10 0H6V6H10V0Z" fill="black"/>
+                                <path d="M4 8H0V14H4V8Z" fill="black"/>
+                                <path d="M16 8H12V14H16V8Z" fill="black"/>
+                                <path d="M10 8H6V14H10V8Z" fill="black"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24196_296">
+                                    <rect width="16" height="14" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="visually-hidden">Показать плитку</span>
+                    </a>
+                    <a href="#" class="card-grid-toggle" type="button">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_24196_293)">
+                                <path d="M16 12H0V14H16V12Z" fill="black"/>
+                                <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24196_293">
+                                    <rect width="16" height="14" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="visually-hidden">Показать cлайдшоу</span>
+                    </a>
+                    <a href="#" class="card-grid-toggle" type="button">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_24196_306)">
+                                <path d="M2 0H0V2H2V0Z" fill="black"/>
+                                <path d="M16 0H4V2H16V0Z" fill="black"/>
+                                <path d="M2 4H0V6H2V4Z" fill="black"/>
+                                <path d="M16 4H4V6H16V4Z" fill="black"/>
+                                <path d="M2 8H0V10H2V8Z" fill="black"/>
+                                <path d="M16 8H4V10H16V8Z" fill="black"/>
+                                <path d="M2 12H0V14H2V12Z" fill="black"/>
+                                <path d="M16 12H4V14H16V12Z" fill="black"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_24196_306">
+                                    <rect width="16" height="14" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="visually-hidden">Показать список</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="product-container page-container-inner">
+                <ul class="product-list">
+                    <li class="product-card">
+                        <img src="./images/catalog-hotel-1.jpeg" width="300" height="206"
+                             alt="гостиница Amara Resort & Spa">
+                        <h2 class="product-card-title">Amara Resort & Spa</h2>
+                        <div class="product-card-content">
+                            <p class="product-card-text">Гостиница</p>
+                            <p class="product-card-text">От 4000 ₽</p>
+                        </div>
+                        <div class="product-card-button">
+                            <a class="button product-card-btn" href="#">Подробнее</a>
+                            <button class="button product-card-btn product-card-btn-fav" type="submit">В избранное
+                            </button>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-rating-img-wrapper">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                            </div>
+                            <span class="product-card-rating-text">Рейтинг: 8,5</span>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <img src="./images/catalog-hotel-2.jpeg" width="300" height="206"
+                             alt="гостиница Desert Quail Inn">
+                        <h2 class="product-card-title">Desert Quail Inn</h2>
+                        <div class="product-card-content">
+                            <p class="product-card-text">Гостиница</p>
+                            <p class="product-card-text">От 3000 ₽</p>
+                        </div>
+                        <div class="product-card-button">
+                            <button class="button product-card-btn" type="submit">Подробнее</button>
+                            <button class="button product-card-btn product-card-btn-fav" type="submit">В избранное
+                            </button>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-rating-img-wrapper">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                            </div>
+                            <span class="product-card-rating-text">Рейтинг: 8,9</span>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <img src="./images/catalog-hotel-3.jpeg" width="300" height="206"
+                             alt="гостиница Villas at Poco Diablo">
+                        <h2 class="product-card-title">Villas at Poco Diablo</h2>
+                        <div class="product-card-content">
+                            <p class="product-card-text">Гостиница</p>
+                            <p class="product-card-text">От 2000 ₽</p>
+                        </div>
+                        <div class="product-card-button">
+                            <button class="button product-card-btn" type="submit">Подробнее</button>
+                            <button class="button product-card-btn product-card-btn-fav product-card-btn-fav-on" type="submit">В избранном
+                            </button>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-rating-img-wrapper">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                            </div>
+                            <span class="product-card-rating-text">Рейтинг: 9,2</span>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <img src="./images/catalog-hotel-4.jpeg" width="300" height="206"
+                             alt="гостиница Desert Quail Inn">
+                        <h2 class="product-card-title">GreenTree Inn</h2>
+                        <div class="product-card-content">
+                            <p class="product-card-text">Гостиница</p>
+                            <p class="product-card-text">От 3000 ₽</p>
+                        </div>
+                        <div class="product-card-button">
+                            <button class="button product-card-btn" type="submit">Подробнее</button>
+                            <button class="button product-card-btn product-card-btn-fav" type="submit">В избранное
+                            </button>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-rating-img-wrapper">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                                <img class="product-card-rating-img" src="./icons/catalog-star.svg" width="18"
+                                     height="17"
+                                     alt="рейтинг гостиницы по количеству звезд">
+                            </div>
+                            <span class="product-card-rating-text">Рейтинг: 9,2</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="load-more">
+            <div class="page-container-inner ">
+            <hr>
+            <button class="button button-load-more" type="button">Загрузить ещё</button>
+            <hr>
+            </div>
+        </section>
+
+        <section class="pagination">
+            <div class="page-container-inner pagination-container">
+                <ul class="pagination-list">
+                    <li class="pagination-item pagination-current">
+                        <a class="pagination-link pagination-link-one">1</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a class="pagination-link" href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a class="pagination-link" href="#">3</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a class="pagination-link" href="#">4</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a class="pagination-link" href="#">...</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a class="pagination-link" href="#">10</a>
+                    </li>
+                </ul>
+                <div class="elements">
+                    <span class="elements-text">Гостиниц на странице:</span>
+                    <div class="elements-type">
+                        <select class="select-elements" aria-label="Сортировка">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                </div>
+            </div>
+        </section>
 
         <section class="subscription">
             <div class="subscription-container-catalog">
@@ -253,7 +480,6 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-
                         </a>
                     </li>
                 </ul>
