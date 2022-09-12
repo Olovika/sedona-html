@@ -79,6 +79,10 @@ p {
     margin: 0;
 }
 
+input {
+    font: inherit;
+}
+
 .title {
     font-weight: 700;
     font-size: 24px;
@@ -1246,8 +1250,6 @@ input::placeholder {
     padding: 5px 19px;
     max-width: 420px;
     width: 100%;
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 40px;
@@ -1268,8 +1270,6 @@ input::placeholder {
     padding: 5px 12px;
     max-width: 44px;
     width: 100%;
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 40px;
