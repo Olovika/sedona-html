@@ -28,31 +28,28 @@
                 </ul>
                 <ul class="navigation-list navigation-user">
                     <li class="navigation-item">
-                        <a class="navigation-link" href="#">
+                        <button class="btn-reset open-modal">
                             <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19.0257 17.05L15.3152 13.35C16.318 12.05 17.02 10.35 17.02 8.44995C17.02 4.04995 13.4098 0.449951 8.99732 0.449951C4.58483 0.449951 0.974609 4.14995 0.974609 8.54995C0.974609 12.95 4.58483 16.55 8.99732 16.55C10.8024 16.55 12.5072 15.95 13.9112 14.85L17.6217 18.55L19.0257 17.05ZM8.99732 14.55C5.68795 14.55 2.98029 11.85 2.98029 8.54995C2.98029 5.24995 5.68795 2.54995 8.99732 2.54995C12.3067 2.54995 15.0143 5.24995 15.0143 8.54995C15.0143 11.85 12.3067 14.55 8.99732 14.55Z"
                                       fill="black"/>
                             </svg>
-                            <span class="visually-hidden">
-                        Поиск
-                        </span>
-                        </a>
+                            <span class="visually-hidden">Поиск</span>
+                        </button>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="#">
+                        <a class="navigation-link navigation-link-notification open-modal" href="#">
                             <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.44382 17C9.14296 17 8.84211 16.9 8.64155 16.6C3.22622 10.5 1.92253 9.1 1.62168 8.7C0.91969 7.8 0.518555 6.6 0.518555 5.4C0.518555 2.4 2.92537 0 6.03416 0C7.33785 0 8.54126 0.5 9.5441 1.3C10.5469 0.5 11.8506 0 13.054 0C16.0625 0 18.5696 2.4 18.5696 5.4C18.5696 6.7 18.0682 7.9 17.266 8.8L10.2461 16.7C10.0455 16.9 9.84495 17 9.44382 17ZM3.42679 7.5C3.72764 7.9 6.93672 11.5 9.5441 14.4L15.7617 7.4C16.2631 6.9 16.4637 6.2 16.4637 5.4C16.4637 3.6 14.9594 2.1 13.1543 2.1C12.1515 2.1 11.1486 2.6 10.4467 3.4C10.1458 3.7 9.84495 3.8 9.5441 3.8C9.24325 3.8 8.9424 3.6 8.74183 3.4C8.03984 2.6 7.037 2.1 6.03416 2.1C4.22906 2.1 2.7248 3.6 2.7248 5.4C2.62452 6.3 3.02565 7 3.42679 7.5C3.3265 7.5 3.3265 7.5 3.42679 7.5Z"
                                       fill="black"/>
                             </svg>
-                            <span class="visually-hidden">
-                        Избранное
-                        </span>
+                            <span class="navigation-link-notification-label">12</span>
+                            <span class="visually-hidden">Избранное</span>
                         </a>
                     </li>
                 </ul>
-                <button class="button navigation-button" type="button" name="button">Хочу сюда!</button>
+                <button class="button navigation-button button-brown" type="button" name="button">Хочу сюда!</button>
             </nav>
         </div>
     </header>
@@ -174,7 +171,7 @@
                 <p class="hotel-search-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
                     гостиниц в
                     Седоне </p>
-                <a class="button hotel-search-button" href="#">Поиск гостиницы в Седоне</a>
+                <a class="button hotel-search-button button-brown" href="#">Поиск гостиницы в Седоне</a>
             </div>
         </section>
 
@@ -186,7 +183,9 @@
                     <label class="visually-hidden" for="email">Ваш e-mail</label>
                     <input class="subscription-field" placeholder="Ваш e-mail" type="email" id="email" name="email"
                            required>
-                    <button class="button subscription-button" type="submit">Подписаться</button>
+                    <button class="button subscription-button button-blue button-blue-submit" type="submit">
+                        Подписаться
+                    </button>
                 </form>
             </div>
         </section>
@@ -259,5 +258,45 @@
         </div>
     </footer>
 </div>
+<dialog class="modal">
+    <div class="modal-header">
+        <span class="title title-modal">Поиск гостиницы в Седоне</span>
+        <button class="button close-modal">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+    </div>
+    <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="modal-date">
+            <label class=" modal-date-text modal-arrival-date">Дата заезда:
+                <input class="modal-input" type="date" name="arrival-date">
+            </label>
+            <span class="comment comment-red">Мы не можем отправить вас в прошлое.</span>
+        </p>
+        <p class="modal-date">
+            <label class="modal-date-text modal-departure-date">Дата выезда:
+                <input class="modal-input" type="date" name="departure-date">
+            </label>
+            <span class="comment">На эти даты есть свободные номера. Пока есть.</span>
+        </p>
+        <div class="modal-quantity">
+            <p class="modal-date-quantity">
+                <label class="modal-date-text">Взрослые:
+                    <button class="button button-modal-input button-minus" type="button"></button>
+                    <input class="modal-input-small" type="number" name="quantity" placeholder="2">
+                    <button class="button button-modal-input button-plus" type="button"></button>
+                </label>
+            </p>
+            <p class="modal-date-quantity">
+                <label class="modal-date-text">Дети:
+                    <button class="button button-modal-input button-minus" type="button"></button>
+                    <input class="modal-input-small" type="number" name="quantity" placeholder="1">
+                    <button class="button button-modal-input button-plus" type="button"></button>
+                </label>
+            </p>
+        </div>
+        <button class="button button-blue-modal" type="submit">Найти</button>
+    </form>
+</dialog>
+<script src="./script.js"></script>
 </body>
 </html>
